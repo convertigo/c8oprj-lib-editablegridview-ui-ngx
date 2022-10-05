@@ -64,6 +64,8 @@ componentScriptContent:
         '
 tplProjectName: mobilebuilder_tpl_8_1_0_ngx
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
+↓FullSyncAction [ngx.components.UIActionStack-1664813471583]: 🗏 mobileSharedActions/FullSyncAction.yaml
+↓agGridEditView [ngx.components.UISharedRegularComponent-1664876513821]: 🗏 mobileSharedComponents/agGridEditView.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
 ↓Style [ngx.components.UIStyle-1491635462437]: 
   comment: You can add some global application styles here
@@ -275,6 +277,7 @@ tplProjectName: mobilebuilder_tpl_8_1_0_ngx
           '
 ↓AutoDarkTheme [ngx.components.UIStyle-1662391887098]: 
   comment: This will define the dark theme for the application. This will be selected if the device is in dark mode. You can disable this to disable automatic dark mode switching
+  isEnabled: false
   styleContent: 
     - xmlizable: 
       - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent

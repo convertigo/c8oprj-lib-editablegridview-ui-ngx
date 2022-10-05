@@ -1,0 +1,26 @@
+↓database [ngx.components.UIStackVariable-1664813495750]: 
+↓action [ngx.components.UIStackVariable-1664813502812]: 
+↓data [ngx.components.UIStackVariable-1664813505276]: 
+↓CallSequence [ngx.components.UIDynamicAction-1664813534603]: 
+  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_EditableGridView_ui_ngx.FullSyncAction"}'
+  ↓database [ngx.components.UIControlVariable-1664813534606]: 
+    comment: new variable
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:vars.database
+  ↓action [ngx.components.UIControlVariable-1664813534609]: 
+    comment: new variable
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:vars.action
+  ↓data [ngx.components.UIControlVariable-1664813534612]: 
+    comment: new variable
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:JSON.stringify(vars.data)
+↓CallFullSync [ngx.components.UIDynamicAction-1664979076973]: 
+  beanData: '{"ionBean":"CallFullSyncAction"}'
+  isEnabled: false

@@ -1,0 +1,85 @@
+↓Do [steps.SimpleStep-1664812149982]: 
+  expression: |
+    'let fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    let res = new org.codehaus.jettison.json.JSONObject();
+    
+    try {
+    	data = JSON.parse(data);
+    } catch (e) {
+    	data = {};
+    }
+    
+    var toJSONObject = (obj) => {
+    	return new org.codehaus.jettison.json.JSONObject(JSON.stringify(obj));
+    };
+    
+    var toJSONArray = (obj) => {
+    	return new org.codehaus.jettison.json.JSONArray(JSON.stringify(obj));
+    };
+    
+    var toQuery = (obj) => {
+    	let k, query = new java.util.HashMap();
+    	for (k in obj) {
+    		query.put(k.toLowerCase(), JSON.stringify(obj[k]));
+    	}
+    	return query;
+    };
+    
+    var remove = (obj, key) => {
+    	let v = obj[key];
+    	delete obj[key];
+    	return v;
+    };
+    
+    if (action == "get") {
+    	res = fsclient.getDocument(database, data["_id"]);
+    } else if (action == "post") {
+    	let doc = toJSONObject(data);
+    	res = fsclient.postDocument(database, doc, null, com.twinsoft.convertigo.engine.enums.CouchPostDocumentPolicy.none, null, false);
+    } else if (action == "view") {
+    	let ddoc = remove(data, "ddoc");
+    	let view = remove(data, "view");
+    	
+    	res = fsclient.getView(database, ddoc, view, toQuery(data));
+    } else if (action == "delete") {
+    	res = fsclient.deleteDocument(database, data["_id"], data["_rev"]);
+    } else if (action == "bulkDocs") {
+    	let docs = toJSONArray(data["docs"]);
+    	res = fsclient.postBulkDocs(database, docs, true, true, com.twinsoft.convertigo.engine.enums.CouchPostDocumentPolicy.none, null, false);
+    }
+    
+    res.remove("_c8oMeta");
+    res.remove("~c8oACL");
+    
+    if (Object.keys(res).length > 0) {
+    	com.twinsoft.convertigo.engine.util.XMLUtils.jsonToXml(res, dom.getDocumentElement());
+    }'
+↓database [variables.RequestableVariable-1664812275328]: 
+↓action [variables.RequestableVariable-1664812201472]: 
+↓data [variables.RequestableVariable-1664812218212]: 
+↓bulkDocs [core.TestCase]: 
+  ↓database [variables.TestCaseVariable-1664980525501]: 
+    value: pocsfil_fullsync
+  ↓action [variables.TestCaseVariable-1664980525503]: 
+    value: bulkDocs
+  ↓data [variables.TestCaseVariable-1664980525505]: 
+    value: '{"docs":[{"type":"person","Matricule":"a2","Service":"EMT","Role":"Visiteur","_id":"04f21d50-fead-49ac-aa95-9838900682d2","_rev":"1-69a8b71734f6bd53cb757d6e323eb7b7","_deleted":true}]}'
+↓bulkDocs1 [core.TestCase]: 
+  ↓database [variables.TestCaseVariable-1664980579008]: 
+    value: pocsfil_fullsync
+  ↓action [variables.TestCaseVariable-1664980579011]: 
+    value: bulkDocs
+  ↓data [variables.TestCaseVariable-1664980579014]: 
+    value: '{"docs":[{"_id":"04f21d50-fead-49ac-aa95-9838900682d2","_rev":"1-69a8b71734f6bd53cb757d6e323eb7b7","_deleted":true}]}'
+↓get [core.TestCase]: 
+  ↓action [variables.TestCaseVariable-1664812862805]: 
+    value: get
+  ↓data [variables.TestCaseVariable-1664812862807]: 
+  ↓database [variables.TestCaseVariable-1664812862809]: 
+    value: pocsfil_fullsync
+↓view [core.TestCase]: 
+  ↓action [variables.TestCaseVariable-1664813047683]: 
+    value: view
+  ↓data [variables.TestCaseVariable-1664813047686]: 
+  ↓database [variables.TestCaseVariable-1664813047689]: 
+    value: pocsfil_fullsync

@@ -54,6 +54,143 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
+  ↓UseSharedComponent [ngx.components.UIUseShared-1664876665936]: 
+    sharedcomponent: lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView
+    ↓pagination [ngx.components.UIUseVariable-1664876811324]: 
+      comment: 'boolean: true (default) or false'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓paginationPageSize [ngx.components.UIUseVariable-1664876811326]: 
+      comment: 'integer: 10 by default'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:100
+    ↓rowSelection [ngx.components.UIUseVariable-1664876811328]: 
+      comment: 'string: ''single'' (default) or ''multiple'''
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'multiple'
+    ↓rowDeselection [ngx.components.UIUseVariable-1664876811330]: 
+      comment: 'boolean: true (default) or false'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓defaultColDef [ngx.components.UIUseVariable-1664876811332]: 
+      comment: 'default is {hide: false, editable: true, sortable: true, resizable: true, filter: true, checkboxSelection: false, singleClickEdit: false}'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: 'script:{hide: false, editable: true, sortable: true, resizable: true, filter: true, checkboxSelection: false, singleClickEdit: false}'
+    ↓width [ngx.components.UIUseVariable-1664876811334]: 
+      comment: width value in % or px
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'100%'
+    ↓height [ngx.components.UIUseVariable-1664876811336]: 
+      comment: height is 'auto' or value in % or px
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'auto'
+    ↓class [ngx.components.UIUseVariable-1664876811338]: 
+      comment: |
+        'One of the themes provided here :
+        
+        https://www.ag-grid.com/javascript-grid-themes-provided/
+        
+        Also be shure to add the theme in the Theme object as :
+        
+        @import "../../node_modules/ag-grid-community/dist/styles/ag-theme-balham-dark/sass/ag-theme-balham-dark.scss";
+        
+        
+        
+        '
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'ag-theme-balham'
+    ↓id [ngx.components.UIUseVariable-1664876811340]: 
+      comment: An Optional ID
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:''
+    ↓suppressCellSelection [ngx.components.UIUseVariable-1664876811342]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
+    ↓suppressRowClickSelection [ngx.components.UIUseVariable-1664876811344]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓overlayLoadingTemplate [ngx.components.UIUseVariable-1664876811346]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:''
+    ↓overlayNoRowsTemplate [ngx.components.UIUseVariable-1664876811348]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:''
+    ↓rowHeight [ngx.components.UIUseVariable-1664876811350]: 
+      comment: Height of the row in pixels as a string
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'25'
+    ↓wrapperClass [ngx.components.UIUseVariable-1664876811352]: 
+      comment: Height of the row in pixels as a string
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:''
+    ↓rowModelType [ngx.components.UIUseVariable-1664876811354]: 
+      comment: Row model type
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'clientSide'
+    ↓maxBlocksInCache [ngx.components.UIUseVariable-1664876811356]: 
+      comment: How many blocks to keep in the store. Default is no limit, so every requested block is kept
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:''
+    ↓autoSizeColumns [ngx.components.UIUseVariable-1664876811358]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓accessibility [ngx.components.UIUseVariable-1664876811360]: 
+      comment: 'boolean: true (default) or false'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
+    ↓ariaLabel [ngx.components.UIUseVariable-1664876811362]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:''
+    ↓database [ngx.components.UIUseVariable-1664876811364]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'pocsfil_fullsync'
+    ↓dataType [ngx.components.UIUseVariable-1664876811366]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'person'
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
@@ -72,6 +209,30 @@ title: First page
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Action 1
+        ↓Event [ngx.components.UIControlEvent-1664813089537]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664813724418]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+            ↓database [ngx.components.UIControlVariable-1664813748259]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:pocsfil_fullsync
+            ↓action [ngx.components.UIControlVariable-1664813748262]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:post
+            ↓data [ngx.components.UIControlVariable-1664813748265]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:{"k":"v","k2":"v2"}
+            ↓Log [ngx.components.UIDynamicAction-1664871811520]: 
+              beanData: '{"ionBean":"LogAction","message":"script:\"JSON: \" + JSON.stringify(out)"}'
     ↓ButtonSet1 [ngx.components.UIDynamicElement-1588170269871]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       tagName: ion-buttons
@@ -83,3 +244,27 @@ title: First page
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Action 2
+        ↓Event [ngx.components.UIControlEvent-1664872060999]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664872061002]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+            ↓database [ngx.components.UIControlVariable-1664872061005]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:pocsfil_fullsync
+            ↓action [ngx.components.UIControlVariable-1664872061008]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:view
+            ↓data [ngx.components.UIControlVariable-1664872061011]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: 'script:{"ddoc":"Data","view":"view", "reduce": false}'
+            ↓Log [ngx.components.UIDynamicAction-1664872061014]: 
+              beanData: '{"ionBean":"LogAction","message":"script:\"JSON: \" + JSON.stringify(out)"}'

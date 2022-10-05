@@ -1,0 +1,665 @@
+↓CellClicked [ngx.components.UICompEvent-1664876514155]: 
+  attrName: CellClicked
+  comment: Fired when a cell is clicked. Data will be the agGrid event
+↓RowClicked [ngx.components.UICompEvent-1664876514158]: 
+  attrName: RowClicked
+  comment: Fired when a row is clicked. Data will be the agGrid event
+↓RowSelected [ngx.components.UICompEvent-1664876514161]: 
+  attrName: RowSelected
+  comment: Fired when a row is selected. Data will be the agGrid event
+↓SortChanged [ngx.components.UICompEvent-1664876514164]: 
+  attrName: SortChanged
+  comment: Fired when a a column is sorted. Data will be the agGrid event
+↓RowDataChanged [ngx.components.UICompEvent-1664876514167]: 
+  attrName: RowDataChanged
+  comment: Fired when Row data changed. Data will be the agGrid event
+↓CellValueChanged [ngx.components.UICompEvent-1664876514170]: 
+  attrName: CellValueChanged
+  comment: Fired when A Cell is edited changed. Data will be the agGrid event
+↓RowDoubleClicked [ngx.components.UICompEvent-1664876514173]: 
+  attrName: RowDoubleClicked
+  comment: Fired when A Cell is edited changed. Data will be the agGrid event
+↓SelectionChanged [ngx.components.UICompEvent-1664876514176]: 
+  attrName: SelectionChanged
+  comment: Fired when selectionChange. Data will be the agGrid event
+↓GridReady [ngx.components.UICompEvent-1664876514179]: 
+  attrName: GridReady
+  comment: Fired when the Grid is ready. Data will be the agGrid event
+↓GetRows [ngx.components.UICompEvent-1664876514182]: 
+  attrName: GetRows
+  comment: Fire when the RowModelType is 'infinite'. Excepts fromatted data into a agGridUpdateRows action
+↓pagination [ngx.components.UICompVariable-1664876514185]: 
+  comment: 'boolean: true (default) or false'
+  value: true
+↓paginationPageSize [ngx.components.UICompVariable-1664876514188]: 
+  comment: 'integer: 10 by default'
+  value: 10
+↓rowSelection [ngx.components.UICompVariable-1664876514191]: 
+  comment: 'string: ''single'' (default) or ''multiple'''
+  value: '''single'''
+↓rowDeselection [ngx.components.UICompVariable-1664876514194]: 
+  comment: 'boolean: true (default) or false'
+  value: true
+↓defaultColDef [ngx.components.UICompVariable-1664876514197]: 
+  comment: 'default is {hide: false, editable: true, sortable: true, resizable: true, filter: true, checkboxSelection: false, singleClickEdit: false}'
+  value: '{hide: false, editable: true, sortable: true, resizable: true, filter: true, checkboxSelection: false, singleClickEdit: false}'
+↓width [ngx.components.UICompVariable-1664876514200]: 
+  comment: width value in % or px
+  value: '''100%'''
+↓height [ngx.components.UICompVariable-1664876514203]: 
+  comment: height is 'auto' or value in % or px
+  value: '''auto'''
+↓class [ngx.components.UICompVariable-1664876514206]: 
+  comment: |
+    'One of the themes provided here :
+    
+    https://www.ag-grid.com/javascript-grid-themes-provided/
+    
+    Also be shure to add the theme in the Theme object as :
+    
+    @import "../../node_modules/ag-grid-community/dist/styles/ag-theme-balham-dark/sass/ag-theme-balham-dark.scss";
+    
+    
+    
+    '
+  value: '''ag-theme-balham'''
+↓id [ngx.components.UICompVariable-1664876514209]: 
+  comment: An Optional ID
+↓suppressCellSelection [ngx.components.UICompVariable-1664876514212]: 
+  value: false
+↓suppressRowClickSelection [ngx.components.UICompVariable-1664876514215]: 
+  value: false
+↓overlayLoadingTemplate [ngx.components.UICompVariable-1664876514218]: 
+↓overlayNoRowsTemplate [ngx.components.UICompVariable-1664876514221]: 
+↓rowHeight [ngx.components.UICompVariable-1664876514224]: 
+  comment: Height of the row in pixels as a string
+  value: '''25'''
+↓wrapperClass [ngx.components.UICompVariable-1664876514227]: 
+  comment: Height of the row in pixels as a string
+↓rowModelType [ngx.components.UICompVariable-1664876514230]: 
+  comment: Row model type
+  value: '''clientSide'''
+↓maxBlocksInCache [ngx.components.UICompVariable-1664876514233]: 
+  comment: How many blocks to keep in the store. Default is no limit, so every requested block is kept
+↓autoSizeColumns [ngx.components.UICompVariable-1664876514236]: 
+  value: true
+↓accessibility [ngx.components.UICompVariable-1664876514239]: 
+  comment: 'boolean: true (default) or false'
+  value: false
+↓ariaLabel [ngx.components.UICompVariable-1664876514242]: 
+↓database [ngx.components.UICompVariable-1664876514245]: 
+↓GenericItem [ngx.components.UIDynamicElement-1664894143074]: 
+  beanData: '{"ionBean":"GenericItem"}'
+  tagName: ion-item
+  ↓ButtonSet [ngx.components.UIDynamicElement-1664894062061]: 
+    beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+    tagName: ion-buttons
+    ↓Refresh [ngx.components.UIDynamicElement-1664894062063]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonColor": "plain:primary",
+         "IonShape": "plain:round",
+         "IonFill": "plain:outline"
+        }'
+      tagName: ion-button
+      ↓Event [ngx.components.UIControlEvent-1664894062067]: 
+        ↓gridRefresh [ngx.components.UIDynamicAction-1664961189398]: 
+          beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+      ↓Icon [ngx.components.UIDynamicElement-1664894192316]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:refresh"}'
+        tagName: ion-icon
+    ↓Add [ngx.components.UIDynamicElement-1664894062069]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "IonColor": "plain:primary",
+         "IonShape": "plain:round",
+         "IonFill": "source:{\"filter\":\"Local\",\"project\":\"lib_GridViewEdit_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.addMode\",\"prefix\":\"\",\"suffix\":\"? ''solid'' : ''outline''\",\"custom\":\"\",\"useCustom\":false}}"
+        }'
+      tagName: ion-button
+      ↓Event [ngx.components.UIControlEvent-1664894062073]: 
+        ↓SetLocal [ngx.components.UIDynamicAction-1664895145161]: 
+          beanData: |
+            '{
+             "ionBean": "SetLocalAction",
+             "Property": "plain:addMode",
+             "Value": "source:{\"filter\":\"Local\",\"project\":\"lib_GridViewEdit_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.addMode\",\"prefix\":\"!\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+            }'
+      ↓Icon [ngx.components.UIDynamicElement-1664894208717]: 
+        beanData: '{"ionBean":"Icon"}'
+        tagName: ion-icon
+    ↓Delete [ngx.components.UIDynamicElement-1664876514080]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "Disabled": "source:{\"filter\":\"Local\",\"project\":\"lib_EditableGridView_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.celSelected\",\"prefix\":\"!(\",\"suffix\":\"?.length > 0)\",\"custom\":\"\",\"useCustom\":false}}",
+         "IonColor": "plain:danger",
+         "IonExpand": "plain:block",
+         "IonShape": "plain:round",
+         "IonFill": "plain:outline"
+        }'
+      tagName: ion-button
+      ↓Icon [ngx.components.UIDynamicElement-1664876514083]: 
+        beanData: |
+          '{
+           "ionBean": "Icon",
+           "IconName": "plain:trash-bin",
+           "IconSlot": "plain:start"
+          }'
+        tagName: ion-icon
+      ↓Directive [ngx.components.UIControlDirective-1664894604683]: 
+        directiveName: If
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.celSelected","prefix":"","suffix":"?.length == 1","custom":"","useCustom":false}}
+        ↓Text [ngx.components.UIText-1664876514086]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.celSelected","prefix":"","suffix":"[0][local?.columnDefs[0].field]","custom":"","useCustom":false}}
+      ↓Event [ngx.components.UIControlEvent-1664876514089]: 
+        ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664901036307]: 
+          beanData: '{"ionBean":"InvokeAction"}'
+          stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+          ↓database [ngx.components.UIControlVariable-1664901045638]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.database","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓action [ngx.components.UIControlVariable-1664901045640]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:bulkDocs
+          ↓gridRefresh [ngx.components.UIDynamicAction-1664961626252]: 
+            beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+          ↓data [ngx.components.UIControlVariable-1664980419840]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: 'script:{docs: this.local.celSelected.map(r => ({''_id'': r[''_id''], ''_rev'': r[''_rev''], ''_deleted'': true}))}'
+      ↓Style [ngx.components.UIStyle-1664876514098]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	width: 100%;
+                '
+      ↓Directive1 [ngx.components.UIControlDirective-1664977887059]: 
+        directiveName: If
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.celSelected","prefix":"","suffix":"?.length > 1","custom":"","useCustom":false}}
+        ↓Text [ngx.components.UIText-1664977887062]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.celSelected","prefix":"","suffix":"?.length + ' ☑'","custom":"","useCustom":false}}
+↓dataType [ngx.components.UICompVariable-1664876514248]: 
+↓Directive [ngx.components.UIControlDirective-1664894928151]: 
+  directiveName: If
+  directiveSource: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+      - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.addMode","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓Add [ngx.components.UIDynamicElement-1664876514104]: 
+    beanData: '{"ionBean":"GenericItem"}'
+    tagName: ion-item
+    ↓Form [ngx.components.UIForm-1664876514113]: 
+      identifier: addData
+      ↓Directive [ngx.components.UIControlDirective-1664876514116]: 
+        directiveIndexName: index
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"PocSFIL","input":"","model":{"data":[{"localObject":"local"}],"path":"?.columnDefs","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓FormItem [ngx.components.UIDynamicElement-1664876514119]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [ngx.components.UIDynamicElement-1664876514122]: 
+            beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
+            tagName: ion-label
+            ↓Text [ngx.components.UIText-1664876514125]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"PocSFIL","input":"","model":{"data":[{"priority":1664876514116}],"path":"","prefix":"","suffix":".field","custom":"","useCustom":false}}
+          ↓TextInput [ngx.components.UIDynamicElement-1664876514128]: 
+            beanData: |
+              '{
+               "ionBean": "Input",
+               "ControlName": "source:{\"filter\":\"Iteration\",\"project\":\"PocSFIL\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664876514116}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".field\",\"custom\":\"\",\"useCustom\":false}}",
+               "Debounce": "plain:0",
+               "Required": "script:index == 0"
+              }'
+            tagName: ion-input
+      ↓SubmitButton [ngx.components.UIDynamicElement-1664876514131]: 
+        beanData: '{"ionBean":"SubmitButton"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1664876514134]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Add data
+      ↓ResetButton [ngx.components.UIDynamicElement-1664876514137]: 
+        beanData: '{"ionBean":"ResetButton"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1664876514140]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Reset
+      ↓Event [ngx.components.UIControlEvent-1664876514143]: 
+        attrName: (ngSubmit)
+        eventName: onSubmit
+        ↓ClearScope [ngx.components.UICustomAction-1664963590254]: 
+          actionValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+              - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                →: |
+                  '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName + event);
+                  		let res = {"type": page.dataType};
+                  		Object.keys(props.stack.root.in).forEach(k => {
+                  			res[k] = props.stack.root.in[k];
+                  			delete props.stack.root.in[k];
+                  		});
+                  		resolve(res);
+                  '
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664961609874]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+            ↓database [ngx.components.UIControlVariable-1664961609880]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.database","prefix":"","suffix":"","custom":"","useCustom":false}}
+            ↓action [ngx.components.UIControlVariable-1664961609883]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:post
+            ↓data [ngx.components.UIControlVariable-1664961609886]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:out
+            ↓gridRefresh [ngx.components.UIDynamicAction-1664961629383]: 
+              beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+      ↓Style [ngx.components.UIStyle-1664876514152]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	width: 100%;
+                '
+↓UseSharedComponent [ngx.components.UIUseShared-1664876513975]: 
+  sharedcomponent: lib_ExtendedComponents_ui_ngx.MobileApplication.Application.agGrid
+  ↓pagination [ngx.components.UIUseVariable-1664876513978]: 
+    comment: 'boolean: true (default) or false'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.pagination
+  ↓paginationPageSize [ngx.components.UIUseVariable-1664876513981]: 
+    comment: 'integer: 10 by default'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.paginationPageSize
+  ↓rowSelection [ngx.components.UIUseVariable-1664876513984]: 
+    comment: 'string: ''single'' (default) or ''multiple'''
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.rowSelection
+  ↓rowDeselection [ngx.components.UIUseVariable-1664876513987]: 
+    comment: 'boolean: true (default) or false'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.rowDeselection
+  ↓defaultColDef [ngx.components.UIUseVariable-1664876513990]: 
+    comment: 'default is {hide: false, editable: true, sortable: true, resizable: true, filter: true, checkboxSelection: false, singleClickEdit: false}'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.defaultColDef
+  ↓width [ngx.components.UIUseVariable-1664876513999]: 
+    comment: width value in % or px
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.width
+  ↓height [ngx.components.UIUseVariable-1664876514002]: 
+    comment: height is 'auto' or value in % or px
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.height
+  ↓class [ngx.components.UIUseVariable-1664876514005]: 
+    comment: |
+      'One of the themes provided here :
+      
+      https://www.ag-grid.com/javascript-grid-themes-provided/
+      
+      Also be shure to add the theme in the Theme object as :
+      
+      @import "../../node_modules/ag-grid-community/dist/styles/ag-theme-balham-dark/sass/ag-theme-balham-dark.scss";
+      
+      
+      
+      '
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.class
+  ↓id [ngx.components.UIUseVariable-1664876514008]: 
+    comment: An Optional ID
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.id
+  ↓suppressCellSelection [ngx.components.UIUseVariable-1664876514011]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.suppressCellSelection
+  ↓suppressRowClickSelection [ngx.components.UIUseVariable-1664876514014]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.suppressRowClickSelection
+  ↓overlayLoadingTemplate [ngx.components.UIUseVariable-1664876514017]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.overlayLoadingTemplate
+  ↓overlayNoRowsTemplate [ngx.components.UIUseVariable-1664876514020]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.overlayNoRowsTemplate
+  ↓rowHeight [ngx.components.UIUseVariable-1664876514023]: 
+    comment: Height of the row in pixels as a string
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.rowHeight
+  ↓wrapperClass [ngx.components.UIUseVariable-1664876514026]: 
+    comment: Height of the row in pixels as a string
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.wrapperClass
+  ↓rowModelType [ngx.components.UIUseVariable-1664876514029]: 
+    comment: Row model type
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.rowModelType
+  ↓maxBlocksInCache [ngx.components.UIUseVariable-1664876514032]: 
+    comment: How many blocks to keep in the store. Default is no limit, so every requested block is kept
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.maxBlocksInCache
+  ↓autoSizeColumns [ngx.components.UIUseVariable-1664876514035]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.autoSizeColumns
+  ↓accessibility [ngx.components.UIUseVariable-1664876514038]: 
+    comment: 'boolean: true (default) or false'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.accessibility
+  ↓ariaLabel [ngx.components.UIUseVariable-1664876514041]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.ariaLabel
+  ↓columnDefs [ngx.components.UIUseVariable-1664876513993]: 
+    comment: 'Array of columnDef {headerName: ''headerName'', field: ''fieldName''} objects'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Local","project":"PocSFIL","input":"","model":{"data":[{"localObject":"local"}],"path":"?.columnDefs","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓rowData [ngx.components.UIUseVariable-1664876513996]: 
+    comment: 'Array of row { fieldName1: ''value1'', fieldName2: ''value2'', fieldName3: true, ...} objects'
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Local","project":"PocSFIL","input":"","model":{"data":[{"localObject":"local"}],"path":"?.rowData","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓Event5 [ngx.components.UIControlEvent-1664876514044]: 
+    attrName: (CellValueChanged)
+    comment: Fired when A Cell is edited changed. Data will be the agGrid event
+    eventName: CellValueChanged
+    ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664877368720]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+      ↓PublishEvent [ngx.components.UIDynamicAction-1664876514050]: 
+        beanData: |
+          '{
+           "ionBean": "PublishEventAction",
+           "topic": "plain:typeSelected",
+           "data": "source:{\"filter\":\"Local\",\"project\":\"PocSFIL\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.currentType\",\"prefix\":\"{type:\",\"suffix\":\"}\",\"custom\":\"\",\"useCustom\":false}}"
+          }'
+        ↓EmitEvent [ngx.components.UIDynamicEmit-1664980910989]: 
+          beanData: |
+            '{
+             "ionBean": "EmitEventAction",
+             "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.CellValueChanged",
+             "data": "script:event"
+            }'
+      ↓database [ngx.components.UIControlVariable-1664877380041]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:this.database
+      ↓action [ngx.components.UIControlVariable-1664877380043]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:'post'
+      ↓data [ngx.components.UIControlVariable-1664877380045]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:out.data
+  ↓Event4 [ngx.components.UIControlEvent-1664876514059]: 
+    attrName: (RowDataChanged)
+    comment: Fired when Row data changed. Data will be the agGrid event
+    eventName: RowDataChanged
+    ↓SetLocal [ngx.components.UIDynamicAction-1664876514062]: 
+      beanData: |
+        '{
+         "ionBean": "SetLocalAction",
+         "Property": "plain:celSelected",
+         "Value": "script:out.api.getSelectedRows()"
+        }'
+      ↓EmitEvent [ngx.components.UIDynamicEmit-1664980901460]: 
+        beanData: |
+          '{
+           "ionBean": "EmitEventAction",
+           "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.RowDataChanged",
+           "data": "script:event"
+          }'
+  ↓Event2 [ngx.components.UIControlEvent-1664977099927]: 
+    attrName: (RowSelected)
+    comment: Fired when a row is selected. Data will be the agGrid event
+    eventName: RowSelected
+    ↓SetLocal1 [ngx.components.UIDynamicAction-1664977309584]: 
+      beanData: |
+        '{
+         "ionBean": "SetLocalAction",
+         "Property": "plain:celSelected",
+         "Value": "script:out.api.getSelectedRows()"
+        }'
+      ↓EmitEvent [ngx.components.UIDynamicEmit-1664980899288]: 
+        beanData: |
+          '{
+           "ionBean": "EmitEventAction",
+           "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.RowSelected",
+           "data": "script:event"
+          }'
+  ↓Event [ngx.components.UIControlEvent-1664980871920]: 
+    attrName: (CellClicked)
+    comment: Fired when a cell is clicked. Data will be the agGrid event
+    eventName: CellClicked
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980881527]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.CellClicked",
+         "data": "script:event"
+        }'
+  ↓Event1 [ngx.components.UIControlEvent-1664980871922]: 
+    attrName: (RowClicked)
+    comment: Fired when a row is clicked. Data will be the agGrid event
+    eventName: RowClicked
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980884011]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.RowClicked",
+         "data": "script:event"
+        }'
+  ↓Event3 [ngx.components.UIControlEvent-1664980871924]: 
+    attrName: (SortChanged)
+    comment: Fired when a a column is sorted. Data will be the agGrid event
+    eventName: SortChanged
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980886080]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.SortChanged",
+         "data": "script:event"
+        }'
+  ↓Event6 [ngx.components.UIControlEvent-1664980871926]: 
+    attrName: (RowDoubleClicked)
+    comment: Fired when A Cell is edited changed. Data will be the agGrid event
+    eventName: RowDoubleClicked
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980889006]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.RowDoubleClicked",
+         "data": "script:event"
+        }'
+  ↓Event7 [ngx.components.UIControlEvent-1664980871928]: 
+    attrName: (SelectionChanged)
+    comment: Fired when selectionChange. Data will be the agGrid event
+    eventName: SelectionChanged
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980891233]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.SelectionChanged",
+         "data": "script:event"
+        }'
+  ↓Event8 [ngx.components.UIControlEvent-1664980871930]: 
+    attrName: (GridReady)
+    comment: Fired when the Grid is ready. Data will be the agGrid event
+    eventName: GridReady
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980893966]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.GridReady",
+         "data": "script:event"
+        }'
+  ↓Event9 [ngx.components.UIControlEvent-1664980871932]: 
+    attrName: (GetRows)
+    comment: Fire when the RowModelType is 'infinite'. Excepts fromatted data into a agGridUpdateRows action
+    eventName: GetRows
+    ↓EmitEvent [ngx.components.UIDynamicEmit-1664980896318]: 
+      beanData: |
+        '{
+         "ionBean": "EmitEventAction",
+         "event": "plain:lib_EditableGridView_ui_ngx.Application.NgxApp.agGridEditView.GetRows",
+         "data": "script:event"
+        }'
+↓SharedComponent_Event [ngx.components.UISharedComponentEvent-1664876514251]: 
+  componentEvent: onChanges
+  ↓gridRefresh [ngx.components.UIDynamicAction-1664959389864]: 
+    beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+↓SharedComponent_Event1 [ngx.components.UISharedComponentEvent-1664895057424]: 
+  ↓SetLocal [ngx.components.UIDynamicAction-1664895067255]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:addMode",
+       "Value": "script:false"
+      }'
+  ↓SetLocal1 [ngx.components.UIDynamicAction-1664876514254]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:columnDefs",
+       "Value": "script:[]"
+      }'
+    ↓SetLocal2 [ngx.components.UIDynamicAction-1664876514257]: 
+      beanData: |
+        '{
+         "ionBean": "SetLocalAction",
+         "Property": "plain:rowData",
+         "Value": "script:[]"
+        }'
+      ↓gridRefresh [ngx.components.UIDynamicAction-1664959444441]: 
+        beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+↓Subscribe_Handler [ngx.components.UIEventSubscriber-1664959236437]: 
+  topic: gridRefresh
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664876992918]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+    ↓database [ngx.components.UIControlVariable-1664877000370]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:this.database
+    ↓action [ngx.components.UIControlVariable-1664877000372]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'view'
+    ↓data [ngx.components.UIControlVariable-1664877000374]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              'script:{
+              "ddoc": "Data",
+              "view": "view",
+              "include_docs": true,
+              "reduce": false,
+              "startKey": [this.dataType],
+              "endKey": [this.dataType, {}]
+              }'
+    ↓SetGridData [ngx.components.UICustomAction-1664876514260]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+              		let res = props.out;
+              		if (res.rows.length > 0) {
+              				let columnDefs = Object.keys(res.rows[0].doc)
+              					.filter(k => k != "type" && !k.startsWith("_") && !k.startsWith("~"))
+              					.map(k =>  {return {field: k}});
+              				columnDefs[0]["editable"] = false;
+              				columnDefs[0]["headerCheckboxSelection"] = true;
+              				columnDefs[0]["checkboxSelection"] = true;
+              				page.local.columnDefs = columnDefs;
+              				page.local.rowData = res.rows.map(r => r.doc);
+              		}
+              			
+              		resolve();
+              '
