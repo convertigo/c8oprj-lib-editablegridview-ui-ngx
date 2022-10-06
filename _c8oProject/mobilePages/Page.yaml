@@ -24,15 +24,6 @@ title: First page
   ↓ToolBar [ngx.components.UIDynamicElement-1491634231108]: 
     beanData: '{"ionBean":"ToolBar"}'
     tagName: ion-toolbar
-    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588171103814]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
-      tagName: ion-buttons
-      ↓BackButton [ngx.components.UIDynamicElement-1643993281257]: 
-        beanData: '{"ionBean":"BackButton"}'
-        tagName: ion-back-button
-      ↓MenuButton [ngx.components.UIDynamicElement-1588172846908]: 
-        beanData: '{"ionBean":"MenuButton"}'
-        tagName: ion-menu-button
     ↓BarTitle [ngx.components.UIDynamicElement-1491634265317]: 
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
@@ -40,7 +31,7 @@ title: First page
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Page
+            - MobileSmartSourceType: plain:Sample lib_EditableGridView_ui_ngx
     ↓ButtonSet2 [ngx.components.UIDynamicElement-1588170811054]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       tagName: ion-buttons
@@ -48,8 +39,24 @@ title: First page
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
         ↓Icon [ngx.components.UIDynamicElement-1588170831166]: 
-          beanData: '{"ionBean":"Icon","IconName":"plain:ellipsis-vertical"}'
+          beanData: '{"ionBean":"Icon","IconName":"plain:skull-outline"}'
           tagName: ion-icon
+        ↓Text [ngx.components.UIText-1665063150377]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:reset
+        ↓Event [ngx.components.UIControlEvent-1665063258353]: 
+          ↓CallSequence [ngx.components.UIDynamicAction-1665063269875]: 
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_EditableGridView_ui_ngx.SampleInit"}'
+            ↓doReset [ngx.components.UIControlVariable-1665063277463]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:true
+            ↓PublishEvent [ngx.components.UIDynamicAction-1665069346882]: 
+              beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
 ↓Content [ngx.components.UIDynamicElement-1489674805352]: 
   beanData: '{"ionBean":"Content"}'
   comment: Page content
@@ -67,7 +74,7 @@ title: First page
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:100
+          - MobileSmartSourceType: script:25
     ↓rowSelection [ngx.components.UIUseVariable-1664876811328]: 
       comment: 'string: ''single'' (default) or ''multiple'''
       varValue: 
@@ -185,15 +192,16 @@ title: First page
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:'pocsfil_fullsync'
+          - MobileSmartSourceType: script:listen(['lib_EditableGridView_ui_ngx.SampleInit'])?.database
     ↓dataType [ngx.components.UIUseVariable-1664876811366]: 
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:'person'
+          - MobileSmartSourceType: script:listen(['lib_EditableGridView_ui_ngx.SampleInit'])?.type
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
+  isEnabled: false
   tagName: ion-footer
   ↓ToolBar [ngx.components.UIDynamicElement-1491634317538]: 
     beanData: '{"ionBean":"ToolBar"}'
@@ -268,3 +276,6 @@ title: First page
                   - MobileSmartSourceType: 'script:{"ddoc":"Data","view":"view", "reduce": false}'
             ↓Log [ngx.components.UIDynamicAction-1664872061014]: 
               beanData: '{"ionBean":"LogAction","message":"script:\"JSON: \" + JSON.stringify(out)"}'
+↓PageEvent [ngx.components.UIPageEvent-1665061794806]: 
+  ↓CallSequence [ngx.components.UIDynamicAction-1665061826810]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_EditableGridView_ui_ngx.SampleInit"}'

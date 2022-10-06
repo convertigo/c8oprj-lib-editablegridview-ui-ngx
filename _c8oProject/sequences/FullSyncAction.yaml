@@ -1,4 +1,4 @@
-↓Do [steps.SimpleStep-1664812149982]: 
+↓Init [steps.SimpleStep-1664812149982]: 
   expression: |
     'let fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
     let res = new org.codehaus.jettison.json.JSONObject();
@@ -30,8 +30,52 @@
     	delete obj[key];
     	return v;
     };
-    
-    if (action == "get") {
+    '
+↓jIf [steps.IfStep-1665049900863]: 
+  condition: (version = "v2") != context.project.get("init")
+  ↓SetDataDesign [steps.SimpleStep-1665049987760]: 
+    expression: |
+      'let ddocid = "_design/Data";
+      let ddoc = fsclient.getDocument(database, ddocid);
+      if (ddoc.has("error") || !ddoc.has("version") || ddoc.getString("version") != version) {
+      	let design = {
+      		_id: ddocid,
+      		version: version,
+      		filters: {},
+      		updates: {},
+      		views: {
+      			view: {
+      				reduce: "_count",
+      				map: "\
+      function (doc) {\r\n\
+        try {\r\n\
+          if (\"type\" in doc) {\r\n\
+            var key, i;\r\n\
+            for (i in doc) {\r\n\
+              key = i;\r\n\
+              break;\r\n\
+            }\r\n\
+            emit([doc.type, doc[key]], null);\r\n\
+          }\r\n\
+        } catch (err) {\r\n\
+          log(err.message);\r\n\
+        }\r\n\
+      }"
+      			}
+      		}
+      	};
+      	if (ddoc.has("_rev")) {
+      		design._rev = ddoc.getString("_rev"); 
+      	}
+      	ddoc = toJSONObject(design);
+      	ddoc = fsclient.postDocument(database, ddoc, null, com.twinsoft.convertigo.engine.enums.CouchPostDocumentPolicy.none, null, true);
+      	log.warning("updated:\n" + ddoc.toString(2));
+      }
+      
+      context.project.set("init", version);'
+↓Exec [steps.SimpleStep-1665048362259]: 
+  expression: |
+    'if (action == "get") {
     	res = fsclient.getDocument(database, data["_id"]);
     } else if (action == "post") {
     	let doc = toJSONObject(data);
@@ -75,6 +119,7 @@
   ↓action [variables.TestCaseVariable-1664812862805]: 
     value: get
   ↓data [variables.TestCaseVariable-1664812862807]: 
+    value: '{"_id":"_design/Data2"}'
   ↓database [variables.TestCaseVariable-1664812862809]: 
     value: pocsfil_fullsync
 ↓view [core.TestCase]: 

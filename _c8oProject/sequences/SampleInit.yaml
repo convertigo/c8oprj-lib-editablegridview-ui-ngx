@@ -1,0 +1,103 @@
+accessibility: Hidden
+↓database [steps.JsonFieldStep-1665060408089]: 
+  key: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: database
+  value: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: JS
+        - →→: database = 'sample_editablegrid'
+↓type [steps.JsonFieldStep-1665060454730]: 
+  key: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: type
+  value: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: JS
+        - →→: type = 'person'
+↓Init [steps.SimpleStep-1665059480876]: 
+  expression: |
+    'let fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    
+    var toJSONObject = (obj) => {
+    	return new org.codehaus.jettison.json.JSONObject(JSON.stringify(obj));
+    };
+    
+    var toJSONArray = (obj) => {
+    	return new org.codehaus.jettison.json.JSONArray(JSON.stringify(obj));
+    };
+    
+    var toQuery = (obj) => {
+    	let k, query = new java.util.HashMap();
+    	for (k in obj) {
+    		query.put(k.toLowerCase(), JSON.stringify(obj[k]));
+    	}
+    	return query;
+    };
+    
+    var needImport = false;
+    if (doReset != "true") {
+    	let res = fsclient.getView(database, "Data", "view", toQuery({
+    		limit: 1,
+    		reduce: false
+    	}));
+    	try {
+    		needImport = res.getJSONArray("rows").length() != 1;
+    	} catch (e) {
+    		needImport = true;
+    	}
+    } else {
+    	needImport = true;
+    }
+    
+    if (needImport) {
+    	context.project.set("init", null);
+    }'
+↓jIf [steps.IfStep-1665060869885]: 
+  condition: doReset == "true"
+  ↓Delete [steps.SimpleStep-1665060883490]: 
+    expression: fsclient.deleteDatabase(database);
+↓jIf_1 [steps.IfStep-1665060937272]: 
+  condition: needImport
+  ↓Read_CSV [steps.ReadCSVStep-1665060975657]: 
+    dataFile: '''.//sample/persons.csv'''
+    titleLine: true
+  ↓JsonSource [steps.JsonSourceStep-1665061378568]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1665060975657
+          - java.lang.String: 
+            - ↑value: .
+    variableName: csv
+  ↓Import [steps.SimpleStep-1665060959360]: 
+    expression: |
+      let docs = csv.document.line;
+      docs.filter(d => d.type = type);
+      docs = toJSONArray(docs);
+      let res = fsclient.postBulkDocs(database, docs, true, true, com.twinsoft.convertigo.engine.enums.CouchPostDocumentPolicy.none, null, false);
+      
+  ↓Call_Sequence [steps.SequenceStep-1665068468829]: 
+    sourceSequence: lib_EditableGridView_ui_ngx.FullSyncAction
+    ↓database [variables.StepVariable-1665068468831]: 
+    ↓action [variables.StepVariable-1665068468833]: 
+      value: get
+    ↓data [variables.StepVariable-1665068468835]: 
+      value: '{"_id":"_design/Data"}'
+↓doReset [variables.RequestableVariable-1665060253996]: 
+  value: false
+↓doReset [core.TestCase]: 
+  ↓doReset [variables.TestCaseVariable-1665060277635]: 
+    value: true

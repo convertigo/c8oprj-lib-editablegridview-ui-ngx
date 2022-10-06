@@ -109,6 +109,9 @@
       ↓Icon [ngx.components.UIDynamicElement-1664894192316]: 
         beanData: '{"ionBean":"Icon","IconName":"plain:refresh"}'
         tagName: ion-icon
+      ↓Tooltips [ngx.components.UIDynamicAttr-1665069483063]: 
+        beanData: '{"ionBean":"Tooltips","Tooltip":"plain:refresh"}'
+        selfClose: false
     ↓Add [ngx.components.UIDynamicElement-1664894062069]: 
       beanData: |
         '{
@@ -129,6 +132,9 @@
       ↓Icon [ngx.components.UIDynamicElement-1664894208717]: 
         beanData: '{"ionBean":"Icon"}'
         tagName: ion-icon
+      ↓Tooltips [ngx.components.UIDynamicAttr-1665069812772]: 
+        beanData: '{"ionBean":"Tooltips","Tooltip":"plain:add data"}'
+        selfClose: false
     ↓Delete [ngx.components.UIDynamicElement-1664876514080]: 
       beanData: |
         '{
@@ -199,6 +205,9 @@
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.celSelected","prefix":"","suffix":"?.length + ' ☑'","custom":"","useCustom":false}}
+      ↓Tooltips [ngx.components.UIDynamicAttr-1665069832908]: 
+        beanData: '{"ionBean":"Tooltips","Tooltip":"plain:delete selected"}'
+        selfClose: false
 ↓dataType [ngx.components.UICompVariable-1664876514248]: 
 ↓Directive [ngx.components.UIControlDirective-1664894928151]: 
   directiveName: If
@@ -240,19 +249,15 @@
       ↓SubmitButton [ngx.components.UIDynamicElement-1664876514131]: 
         beanData: '{"ionBean":"SubmitButton"}'
         tagName: ion-button
-        ↓Text [ngx.components.UIText-1664876514134]: 
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Add data
+        ↓Icon [ngx.components.UIDynamicElement-1665062719132]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:save"}'
+          tagName: ion-icon
       ↓ResetButton [ngx.components.UIDynamicElement-1664876514137]: 
         beanData: '{"ionBean":"ResetButton"}'
         tagName: ion-button
-        ↓Text [ngx.components.UIText-1664876514140]: 
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Reset
+        ↓Icon [ngx.components.UIDynamicElement-1665062722607]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:ban-outline"}'
+          tagName: ion-icon
       ↓Event [ngx.components.UIControlEvent-1664876514143]: 
         attrName: (ngSubmit)
         eventName: onSubmit
@@ -263,11 +268,12 @@
               - com.twinsoft.convertigo.beans.common.FormatedContent: 
                 →: |
                   '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName + event);
-                  		let res = {"type": page.dataType};
+                  		let res = {};
                   		Object.keys(props.stack.root.in).forEach(k => {
                   			res[k] = props.stack.root.in[k];
                   			delete props.stack.root.in[k];
                   		});
+                  		res["type"] = page.dataType;
                   		resolve(res);
                   '
           ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1664961609874]: 

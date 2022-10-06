@@ -2,12 +2,12 @@
 ↓lib_EditableGridView_ui_ngx [core.Project]: 
   comment: Convertigo NGX builder Project
   corsOrigin: =Origin
+  version: 8.1.0.0
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓FullSyncAction [sequences.GenericSequence]: 🗏 sequences/FullSyncAction.yaml
+  ↓SampleInit [sequences.GenericSequence]: 🗏 sequences/SampleInit.yaml
   ↓lib_ExtendedComponents_ui_ngx_reference [references.ProjectSchemaReference]: 
     projectName: lib_ExtendedComponents_ui_ngx=git@github.com:convertigo/c8oprj-lib-extended-components-ui-ngx.git:branch=8.1.x
-  ↓PocSFIL_reference [references.ProjectSchemaReference]: 
-    projectName: PocSFIL=git@github.com:convertigo/c8oprj-poc-sfil.git:branch=master
   ↓Project_reference [references.ProjectSchemaReference]: 
     comment: ngx builder template
     projectName: mobilebuilder_tpl_8_1_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_1_0_ngx.zip
