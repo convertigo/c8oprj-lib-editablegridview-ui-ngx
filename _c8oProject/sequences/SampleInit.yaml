@@ -47,7 +47,7 @@ accessibility: Hidden
     
     var needImport = false;
     if (doReset != "true") {
-    	let res = fsclient.getView(database, "Data", "view", toQuery({
+    	let res = fsclient.getView(database, "EditableGridView", "view", toQuery({
     		limit: 1,
     		reduce: false
     	}));
@@ -95,7 +95,7 @@ accessibility: Hidden
     ↓action [variables.StepVariable-1665068468833]: 
       value: get
     ↓data [variables.StepVariable-1665068468835]: 
-      value: '{"_id":"_design/Data"}'
+      value: '{"_id":"_design/EditableGridView"}'
 ↓doReset [variables.RequestableVariable-1665060253996]: 
   value: false
 ↓doReset [core.TestCase]: 

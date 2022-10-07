@@ -641,7 +641,7 @@
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: |
               'script:{
-              "ddoc": "Data",
+              "ddoc": "EditableGridView",
               "view": "view",
               "include_docs": true,
               "reduce": false,

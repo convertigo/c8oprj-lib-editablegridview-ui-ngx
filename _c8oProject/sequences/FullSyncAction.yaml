@@ -35,7 +35,7 @@
   condition: (version = "v2") != context.project.get("init")
   ↓SetDataDesign [steps.SimpleStep-1665049987760]: 
     expression: |
-      'let ddocid = "_design/Data";
+      'let ddocid = "_design/EditableGridView";
       let ddoc = fsclient.getDocument(database, ddocid);
       if (ddoc.has("error") || !ddoc.has("version") || ddoc.getString("version") != version) {
       	let design = {
@@ -101,30 +101,3 @@
 ↓database [variables.RequestableVariable-1664812275328]: 
 ↓action [variables.RequestableVariable-1664812201472]: 
 ↓data [variables.RequestableVariable-1664812218212]: 
-↓bulkDocs [core.TestCase]: 
-  ↓database [variables.TestCaseVariable-1664980525501]: 
-    value: pocsfil_fullsync
-  ↓action [variables.TestCaseVariable-1664980525503]: 
-    value: bulkDocs
-  ↓data [variables.TestCaseVariable-1664980525505]: 
-    value: '{"docs":[{"type":"person","Matricule":"a2","Service":"EMT","Role":"Visiteur","_id":"04f21d50-fead-49ac-aa95-9838900682d2","_rev":"1-69a8b71734f6bd53cb757d6e323eb7b7","_deleted":true}]}'
-↓bulkDocs1 [core.TestCase]: 
-  ↓database [variables.TestCaseVariable-1664980579008]: 
-    value: pocsfil_fullsync
-  ↓action [variables.TestCaseVariable-1664980579011]: 
-    value: bulkDocs
-  ↓data [variables.TestCaseVariable-1664980579014]: 
-    value: '{"docs":[{"_id":"04f21d50-fead-49ac-aa95-9838900682d2","_rev":"1-69a8b71734f6bd53cb757d6e323eb7b7","_deleted":true}]}'
-↓get [core.TestCase]: 
-  ↓action [variables.TestCaseVariable-1664812862805]: 
-    value: get
-  ↓data [variables.TestCaseVariable-1664812862807]: 
-    value: '{"_id":"_design/Data2"}'
-  ↓database [variables.TestCaseVariable-1664812862809]: 
-    value: pocsfil_fullsync
-↓view [core.TestCase]: 
-  ↓action [variables.TestCaseVariable-1664813047683]: 
-    value: view
-  ↓data [variables.TestCaseVariable-1664813047686]: 
-  ↓database [variables.TestCaseVariable-1664813047689]: 
-    value: pocsfil_fullsync
