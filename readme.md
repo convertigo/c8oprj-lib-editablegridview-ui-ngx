@@ -86,6 +86,9 @@ Describes the mobile application global properties
 <td>autoSizeColumns</td><td></td>
 </tr>
 <tr>
+<td>canAddColumn</td><td>add a button for adding new columns</td>
+</tr>
+<tr>
 <td>class</td><td>One of the themes provided here :
 
 https://www.ag-grid.com/javascript-grid-themes-provided/

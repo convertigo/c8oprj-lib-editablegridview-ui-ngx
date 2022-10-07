@@ -95,7 +95,7 @@
     - xmlizable: 
       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
       - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.addDataMode","prefix":"","suffix":"== 'modal'","custom":"","useCustom":false}}
-  ↓Modal [ngx.components.UIDynamicElement-1665133171696]: 
+  ↓ModalAddData [ngx.components.UIDynamicElement-1665133171696]: 
     beanData: '{"ionBean":"InlineModal","Trigger":"plain:addData"}'
     tagName: ion-modal
     ↓Form [ngx.components.UIForm-1664876514113]: 
@@ -197,6 +197,157 @@
       ↓Icon [ngx.components.UIDynamicElement-1665133965122]: 
         beanData: '{"ionBean":"Icon","IconName":"plain:close"}'
         tagName: ion-icon
+  ↓Directive [ngx.components.UIControlDirective-1665155863610]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.canAddColumn","prefix":"","suffix":"","custom":"","useCustom":false}}
+    ↓ModalAddColumn [ngx.components.UIDynamicElement-1665152210681]: 
+      beanData: '{"ionBean":"InlineModal","Trigger":"plain:addColumn"}'
+      tagName: ion-modal
+      ↓Form [ngx.components.UIForm-1665155843262]: 
+        identifier: addColumn
+        ↓FormItem [ngx.components.UIDynamicElement-1665155843265]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [ngx.components.UIDynamicElement-1665155843268]: 
+            beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
+            tagName: ion-label
+            ↓Text [ngx.components.UIText-1665155843271]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Column
+          ↓TextInput [ngx.components.UIDynamicElement-1665155843274]: 
+            beanData: |
+              '{
+               "ionBean": "Input",
+               "ControlName": "plain:name",
+               "Debounce": "plain:0",
+               "Required": "plain:true"
+              }'
+            tagName: ion-input
+        ↓SubmitButton [ngx.components.UIDynamicElement-1665155843277]: 
+          beanData: '{"ionBean":"SubmitButton"}'
+          tagName: ion-button
+          ↓Icon [ngx.components.UIDynamicElement-1665155843280]: 
+            beanData: '{"ionBean":"Icon","IconName":"plain:save"}'
+            tagName: ion-icon
+        ↓ResetButton [ngx.components.UIDynamicElement-1665155843283]: 
+          beanData: '{"ionBean":"ResetButton"}'
+          tagName: ion-button
+          ↓Icon [ngx.components.UIDynamicElement-1665155843286]: 
+            beanData: '{"ionBean":"Icon","IconName":"plain:ban-outline"}'
+            tagName: ion-icon
+        ↓Event [ngx.components.UIControlEvent-1665155843289]: 
+          attrName: (ngSubmit)
+          eventName: onSubmit
+          ↓ClearScope [ngx.components.UICustomAction-1665155843292]: 
+            actionValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName + event);
+                    		let res = {};
+                    		Object.keys(props.stack.root.in).forEach(k => {
+                    			res[k] = props.stack.root.in[k];
+                    			delete props.stack.root.in[k];
+                    		});
+                    		resolve(res);
+                    '
+            ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1665155843295]: 
+              beanData: '{"ionBean":"InvokeAction"}'
+              stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+              ↓database [ngx.components.UIControlVariable-1665155843298]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:this.database
+              ↓action [ngx.components.UIControlVariable-1665155843301]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:'view'
+              ↓data [ngx.components.UIControlVariable-1665155843304]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: |
+                        'script:{
+                        "ddoc": "EditableGridView",
+                        "view": "view",
+                        "include_docs": true,
+                        "reduce": false,
+                        "startKey": [this.dataType],
+                        "endKey": [this.dataType, {}],
+                        "limit": 20
+                        }'
+              ↓AddColumn [ngx.components.UICustomAction-1665155843307]: 
+                actionValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                        		let out = {
+                        			docs: props.out.rows.map(r => {
+                        				let d = r.doc;
+                        				d[props.stack.ClearScope.out.name] = '''';
+                        				return d;
+                        			})
+                        		};			
+                        		resolve(out);
+                        '
+                ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665155843310]: 
+                  beanData: '{"ionBean":"InvokeAction"}'
+                  stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+                  ↓database [ngx.components.UIControlVariable-1665155843313]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.database","prefix":"","suffix":"","custom":"","useCustom":false}}
+                  ↓action [ngx.components.UIControlVariable-1665155843316]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:bulkDocs
+                  ↓data [ngx.components.UIControlVariable-1665155843319]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:out
+                  ↓gridRefresh [ngx.components.UIDynamicAction-1665155843322]: 
+                    beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+                  ↓CloseModal [ngx.components.UIDynamicAction-1665156223282]: 
+                    beanData: '{"ionBean":"CloseModalAction"}'
+        ↓Style [ngx.components.UIStyle-1665155843328]: 
+          styleContent: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+              - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                →: |
+                  '	width: 100%;
+                  '
+      ↓Label [ngx.components.UIDynamicElement-1665152210683]: 
+        beanData: '{"ionBean":"Label"}'
+        tagName: ion-label
+        ↓Text [ngx.components.UIText-1665152210685]: 
+      ↓Button [ngx.components.UIDynamicElement-1665152210687]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Label [ngx.components.UIDynamicElement-1665152210689]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1665152210691]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:close modal
+        ↓Event [ngx.components.UIControlEvent-1665152210693]: 
+          ↓CloseModal [ngx.components.UIDynamicAction-1665152210695]: 
+            beanData: '{"ionBean":"CloseModalAction"}'
 ↓GenericItem [ngx.components.UIDynamicElement-1664894143074]: 
   beanData: '{"ionBean":"GenericItem"}'
   tagName: ion-item
@@ -240,6 +391,13 @@
                "Property": "plain:addMode",
                "Value": "source:{\"filter\":\"Local\",\"project\":\"lib_GridViewEdit_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.addMode\",\"prefix\":\"!\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
               }'
+          ↓SetLocal2 [ngx.components.UIDynamicAction-1665152651103]: 
+            beanData: |
+              '{
+               "ionBean": "SetLocalAction",
+               "Property": "plain:addColumnMode",
+               "Value": "script:false"
+              }'
       ↓Icon [ngx.components.UIDynamicElement-1664894208717]: 
         beanData: '{"ionBean":"Icon"}'
         tagName: ion-icon
@@ -252,6 +410,60 @@
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:addData
+    ↓Directive [ngx.components.UIControlDirective-1665155909814]: 
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.canAddColumn","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓AddColumn [ngx.components.UIDynamicElement-1665151088001]: 
+        beanData: |
+          '{
+           "ionBean": "Button",
+           "IonColor": "plain:primary",
+           "IonShape": "plain:round",
+           "IonFill": "source:{\"filter\":\"Local\",\"project\":\"lib_EditableGridView_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.addColumnMode\",\"prefix\":\"\",\"suffix\":\"? ''solid'' : ''outline''\",\"custom\":\"\",\"useCustom\":false}}"
+          }'
+        tagName: ion-button
+        ↓Event [ngx.components.UIControlEvent-1665151088004]: 
+          ↓If [ngx.components.UIDynamicAction-1665151088007]: 
+            beanData: '{"ionBean":"IfAction","condition":"source:{\"filter\":\"Shared\",\"project\":\"lib_EditableGridView_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1664876513821,\"regular\":true}],\"path\":\"?.addDataMode\",\"prefix\":\"\",\"suffix\":\"!= ''modal''\",\"custom\":\"\",\"useCustom\":false}}"}'
+            ↓SetLocal [ngx.components.UIDynamicAction-1665151088010]: 
+              beanData: |
+                '{
+                 "ionBean": "SetLocalAction",
+                 "Property": "plain:addColumnMode",
+                 "Value": "source:{\"filter\":\"Local\",\"project\":\"lib_EditableGridView_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.addColumnMode\",\"prefix\":\"!\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                }'
+            ↓SetLocal1 [ngx.components.UIDynamicAction-1665152667809]: 
+              beanData: |
+                '{
+                 "ionBean": "SetLocalAction",
+                 "Property": "plain:addMode",
+                 "Value": "script:false"
+                }'
+        ↓Icon [ngx.components.UIDynamicElement-1665151088013]: 
+          beanData: '{"ionBean":"Icon","IconSource":"script:''data:image\/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPjxwYXRoIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTIwIDRjLjYgMCAxIC40IDEgMXYyYTEgMSAwIDAxLTIgMFY2aC04djEyaDh2LTFhMSAxIDAgMDEyIDB2MmMwIC41LS40IDEtLjkgMUg1YTIgMiAwIDAxLTItMlY2YzAtMS4xLjktMiAyLTJoMTV6TTkgMTNINXY1aDR2LTV6bTctNWMuNSAwIDEgLjQgMSAuOVYxMWgyYTEgMSAwIDAxLjEgMkgxN3YyYTEgMSAwIDAxLTIgLjFWMTNoLTJhMSAxIDAgMDEtLjEtMkgxNVY5YzAtLjYuNC0xIDEtMXpNOSA2SDV2NWg0VjZ6Ij48L3BhdGg+PC9zdmc+''"}'
+          tagName: ion-icon
+        ↓Tooltips [ngx.components.UIDynamicAttr-1665151088016]: 
+          beanData: '{"ionBean":"Tooltips","Tooltip":"plain:add column"}'
+          selfClose: false
+        ↓Image [ngx.components.UIDynamicElement-1665151264044]: 
+          beanData: |
+            '{
+             "ionBean": "Image",
+             "url": "script:''data:image\/svg+xml;utf8,<svg width=\"24\" height=\"24\"><path fill-rule=\"nonzero\" d=\"M20 4c.6 0 1 .4 1 1v2a1 1 0 01-2 0V6h-8v12h8v-1a1 1 0 012 0v2c0 .5-.4 1-.9 1H5a2 2 0 01-2-2V6c0-1.1.9-2 2-2h15zM9 13H5v5h4v-5zm7-5c.5 0 1 .4 1 .9V11h2a1 1 0 01.1 2H17v2a1 1 0 01-2 .1V13h-2a1 1 0 01-.1-2H15V9c0-.6.4-1 1-1zM9 6H5v5h4V6z\"><\/path><\/svg>''",
+             "height": "plain:32px"
+            }'
+          isEnabled: false
+          selfClose: true
+          tagName: img
+        ↓Attr [ngx.components.UIAttribute-1665152249203]: 
+          attrName: id
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:addColumn
     ↓Delete [ngx.components.UIDynamicElement-1664876514080]: 
       beanData: |
         '{
@@ -332,38 +544,32 @@
   directiveSource: 
     - xmlizable: 
       - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-      - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.addMode","prefix":"","suffix":"","custom":"","useCustom":false}}
-  ↓Add [ngx.components.UIDynamicElement-1664876514104]: 
+      - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.addColumnMode","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓AddColumn [ngx.components.UIDynamicElement-1664876514104]: 
     beanData: '{"ionBean":"GenericItem"}'
     tagName: ion-item
     ↓Form [ngx.components.UIForm-1665134202980]: 
-      identifier: addData
-      ↓Directive [ngx.components.UIControlDirective-1665134202983]: 
-        directiveIndexName: index
-        directiveSource: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Local","project":"PocSFIL","input":"","model":{"data":[{"localObject":"local"}],"path":"?.columnDefs","prefix":"","suffix":"","custom":"","useCustom":false}}
-        ↓FormItem [ngx.components.UIDynamicElement-1665134202986]: 
-          beanData: '{"ionBean":"FormItem"}'
-          tagName: ion-item
-          ↓Label [ngx.components.UIDynamicElement-1665134202989]: 
-            beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
-            tagName: ion-label
-            ↓Text [ngx.components.UIText-1665134202992]: 
-              textValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"PocSFIL","input":"","model":{"data":[{"priority":1665134202983}],"path":"","prefix":"","suffix":".field","custom":"","useCustom":false}}
-          ↓TextInput [ngx.components.UIDynamicElement-1665134202995]: 
-            beanData: |
-              '{
-               "ionBean": "Input",
-               "ControlName": "source:{\"filter\":\"Iteration\",\"project\":\"PocSFIL\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1665134202983}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".field\",\"custom\":\"\",\"useCustom\":false}}",
-               "Debounce": "plain:0",
-               "Required": "script:index == 0"
-              }'
-            tagName: ion-input
+      identifier: addColumn
+      ↓FormItem [ngx.components.UIDynamicElement-1665134202986]: 
+        beanData: '{"ionBean":"FormItem"}'
+        tagName: ion-item
+        ↓Label [ngx.components.UIDynamicElement-1665134202989]: 
+          beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1665134202992]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:Column
+        ↓TextInput [ngx.components.UIDynamicElement-1665134202995]: 
+          beanData: |
+            '{
+             "ionBean": "Input",
+             "ControlName": "plain:name",
+             "Debounce": "plain:0",
+             "Required": "plain:true"
+            }'
+          tagName: ion-input
       ↓SubmitButton [ngx.components.UIDynamicElement-1665134202998]: 
         beanData: '{"ionBean":"SubmitButton"}'
         tagName: ion-button
@@ -391,30 +597,174 @@
                   			res[k] = props.stack.root.in[k];
                   			delete props.stack.root.in[k];
                   		});
+                  		resolve(res);
+                  '
+          ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1665153280345]: 
+            beanData: '{"ionBean":"InvokeAction"}'
+            stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+            ↓database [ngx.components.UIControlVariable-1665153280348]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:this.database
+            ↓action [ngx.components.UIControlVariable-1665153280351]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:'view'
+            ↓data [ngx.components.UIControlVariable-1665153280354]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: |
+                      'script:{
+                      "ddoc": "EditableGridView",
+                      "view": "view",
+                      "include_docs": true,
+                      "reduce": false,
+                      "startKey": [this.dataType],
+                      "endKey": [this.dataType, {}],
+                      "limit": 20
+                      }'
+            ↓AddColumn [ngx.components.UICustomAction-1665153621614]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		let out = {
+                      			docs: props.out.rows.map(r => {
+                      				let d = r.doc;
+                      				d[props.stack.ClearScope.out.name] = '''';
+                      				return d;
+                      			})
+                      		};			
+                      		resolve(out);
+                      '
+              ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665134203016]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
+                ↓database [ngx.components.UIControlVariable-1665134203019]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.database","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓action [ngx.components.UIControlVariable-1665134203022]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:bulkDocs
+                ↓data [ngx.components.UIControlVariable-1665134203025]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:out
+                ↓gridRefresh [ngx.components.UIDynamicAction-1665134203028]: 
+                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
+                ↓SetLocal2 [ngx.components.UIDynamicAction-1665155831290]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetLocalAction",
+                     "Property": "plain:addColumnMode",
+                     "Value": "script:false"
+                    }'
+      ↓Style [ngx.components.UIStyle-1665134203031]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	width: 100%;
+                '
+↓Directive2 [ngx.components.UIControlDirective-1665152438974]: 
+  directiveName: If
+  directiveSource: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+      - MobileSmartSourceType: source:{"filter":"Local","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"localObject":"local"}],"path":"?.addMode","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓Add [ngx.components.UIDynamicElement-1665152438977]: 
+    beanData: '{"ionBean":"GenericItem"}'
+    tagName: ion-item
+    ↓Form [ngx.components.UIForm-1665152438980]: 
+      identifier: addData
+      ↓Directive [ngx.components.UIControlDirective-1665152438983]: 
+        directiveIndexName: index
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"PocSFIL","input":"","model":{"data":[{"localObject":"local"}],"path":"?.columnDefs","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓FormItem [ngx.components.UIDynamicElement-1665152438986]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [ngx.components.UIDynamicElement-1665152438989]: 
+            beanData: '{"ionBean":"Label","Position":"plain:fixed"}'
+            tagName: ion-label
+            ↓Text [ngx.components.UIText-1665152438992]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"PocSFIL","input":"","model":{"data":[{"priority":1665152438983}],"path":"","prefix":"","suffix":".field","custom":"","useCustom":false}}
+          ↓TextInput [ngx.components.UIDynamicElement-1665152438995]: 
+            beanData: |
+              '{
+               "ionBean": "Input",
+               "ControlName": "source:{\"filter\":\"Iteration\",\"project\":\"PocSFIL\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1665152438983}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".field\",\"custom\":\"\",\"useCustom\":false}}",
+               "Debounce": "plain:0",
+               "Required": "script:index == 0"
+              }'
+            tagName: ion-input
+      ↓SubmitButton [ngx.components.UIDynamicElement-1665152438998]: 
+        beanData: '{"ionBean":"SubmitButton"}'
+        tagName: ion-button
+        ↓Icon [ngx.components.UIDynamicElement-1665152439001]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:save"}'
+          tagName: ion-icon
+      ↓ResetButton [ngx.components.UIDynamicElement-1665152439004]: 
+        beanData: '{"ionBean":"ResetButton"}'
+        tagName: ion-button
+        ↓Icon [ngx.components.UIDynamicElement-1665152439007]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:ban-outline"}'
+          tagName: ion-icon
+      ↓Event [ngx.components.UIControlEvent-1665152439010]: 
+        attrName: (ngSubmit)
+        eventName: onSubmit
+        ↓ClearScope [ngx.components.UICustomAction-1665152439013]: 
+          actionValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+              - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                →: |
+                  '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName + event);
+                  		let res = {};
+                  		Object.keys(props.stack.root.in).forEach(k => {
+                  			res[k] = props.stack.root.in[k];
+                  			delete props.stack.root.in[k];
+                  		});
                   		res["type"] = page.dataType;
                   		resolve(res);
                   '
-          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665134203016]: 
+          ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1665152439016]: 
             beanData: '{"ionBean":"InvokeAction"}'
             stack: lib_EditableGridView_ui_ngx.Application.NgxApp.FullSyncAction
-            ↓database [ngx.components.UIControlVariable-1665134203019]: 
+            ↓database [ngx.components.UIControlVariable-1665152439019]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_EditableGridView_ui_ngx","input":"","model":{"data":[{"priority":1664876513821,"regular":true}],"path":"?.database","prefix":"","suffix":"","custom":"","useCustom":false}}
-            ↓action [ngx.components.UIControlVariable-1665134203022]: 
+            ↓action [ngx.components.UIControlVariable-1665152439022]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:post
-            ↓data [ngx.components.UIControlVariable-1665134203025]: 
+            ↓data [ngx.components.UIControlVariable-1665152439025]: 
               varValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:out
-            ↓gridRefresh [ngx.components.UIDynamicAction-1665134203028]: 
+            ↓gridRefresh [ngx.components.UIDynamicAction-1665152439028]: 
               beanData: '{"ionBean":"PublishEventAction","topic":"plain:gridRefresh"}'
-      ↓Style [ngx.components.UIStyle-1665134203031]: 
+      ↓Style [ngx.components.UIStyle-1665152439031]: 
         styleContent: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -722,6 +1072,13 @@
        "Property": "plain:addMode",
        "Value": "script:false"
       }'
+  ↓SetLocal2 [ngx.components.UIDynamicAction-1665152291260]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:addColumnMode",
+       "Value": "script:false"
+      }'
   ↓SetLocal1 [ngx.components.UIDynamicAction-1664876514254]: 
     beanData: |
       '{
@@ -790,3 +1147,6 @@
 ↓addDataMode [ngx.components.UICompVariable-1665134110102]: 
   comment: add data with an inline 'form' or a 'modal' page, default is 'form'
   value: '''form'''
+↓canAddColumn [ngx.components.UICompVariable-1665155616551]: 
+  comment: add a button for adding new columns
+  value: '''false'''
