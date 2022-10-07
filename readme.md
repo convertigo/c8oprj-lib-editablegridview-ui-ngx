@@ -77,6 +77,9 @@ Describes the mobile application global properties
 <td>accessibility</td><td>boolean: true (default) or false</td>
 </tr>
 <tr>
+<td>addDataMode</td><td>add data with an inline 'form' or a 'modal' page, default is 'form'</td>
+</tr>
+<tr>
 <td>ariaLabel</td><td></td>
 </tr>
 <tr>
@@ -96,10 +99,10 @@ Also be shure to add the theme in the Theme object as :
 </td>
 </tr>
 <tr>
-<td>database</td><td></td>
+<td>database</td><td>name of the fullsync database where data indexed by the EditableGridView design document</td>
 </tr>
 <tr>
-<td>dataType</td><td></td>
+<td>dataType</td><td>type of document too show, indexed by the EditableGridView design document</td>
 </tr>
 <tr>
 <td>defaultColDef</td><td>default is {hide: false, editable: true, sortable: true, resizable: true, filter: true, checkboxSelection: false, singleClickEdit: false}</td>

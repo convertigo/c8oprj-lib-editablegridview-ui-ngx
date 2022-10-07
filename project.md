@@ -197,6 +197,14 @@ boolean: true (default) or false
 </tr>
 <tr>
 <td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;addDataMode
+</td>
+<td>
+add data with an inline 'form' or a 'modal' page, default is 'form'
+</td>
+</tr>
+<tr>
+<td>
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;ariaLabel
 </td>
 <td>
@@ -234,7 +242,7 @@ Also be shure to add the theme in the Theme object as :
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;database
 </td>
 <td>
-
+name of the fullsync database where data indexed by the EditableGridView design document
 </td>
 </tr>
 <tr>
@@ -242,7 +250,7 @@ Also be shure to add the theme in the Theme object as :
 <img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;dataType
 </td>
 <td>
-
+type of document too show, indexed by the EditableGridView design document
 </td>
 </tr>
 <tr>

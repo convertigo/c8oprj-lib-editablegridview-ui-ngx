@@ -198,6 +198,12 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: script:listen(['lib_EditableGridView_ui_ngx.SampleInit'])?.type
+    ↓addDataMode [ngx.components.UIUseVariable-1665134681245]: 
+      comment: add data with an inline 'form' or a 'modal' page, default is 'form'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'form'
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
